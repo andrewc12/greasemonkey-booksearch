@@ -43,11 +43,11 @@ if (page === 'book') {
     newLink.appendChild(linkText);
     newLink.setAttribute('href', mamSearchUrl);
     newLink.setAttribute('style', 'color:#b3b3b3;font-style:italic');
-    const { parentNode } = bookList[i];
+    let parentNode = bookList[i].parentNode;
     if (parentNode !== null) {
-      const parentNode2 = parentNode.parentNode;
-      if (parentNode2 !== null) {
-        parentNode2.appendChild(newLink);
+      let grandParentNode = parentNode.parentNode;
+      if (grandParentNode !== null) {
+        grandParentNode.appendChild(newLink);
       }
     }
   }
